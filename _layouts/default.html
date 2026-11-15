@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-GB' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<style>
+:root { --bg:#ffffff; --fg:#1b1b1f; --muted:#5c5c66; --link:#1d4fd8; --rule:#e3e3e8; --code:#f3f3f6; }
+@media (prefers-color-scheme: dark) { :root { --bg:#131316; --fg:#ececf1; --muted:#a0a0ab; --link:#8ab4ff; --rule:#2c2c33; --code:#1f1f25; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; overflow-wrap:anywhere; }
+header, main, footer { max-width:44rem; margin:0 auto; padding:0 16px; }
+header { padding-top:20px; padding-bottom:12px; border-bottom:1px solid var(--rule); }
+header a { color:var(--fg); font-weight:700; text-decoration:none; }
+nav a { margin-right:14px; font-size:15px; }
+main { padding-top:8px; padding-bottom:40px; }
+h1 { line-height:1.2; } h2, h3 { line-height:1.3; margin-top:2em; }
+a { color:var(--link); }
+table { border-collapse:collapse; width:100%; font-size:15px; display:block; overflow-x:auto; }
+th, td { border:1px solid var(--rule); padding:6px 8px; text-align:left; vertical-align:top; }
+code { background:var(--code); padding:0 4px; border-radius:4px; }
+footer { border-top:1px solid var(--rule); padding-top:12px; padding-bottom:28px; color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<header>
+  <a href="{{ '/' | relative_url }}">Not Your Turn</a>
+  <nav>
+    <a href="{{ '/privacy-policy' | relative_url }}">Privacy</a>
+    <a href="{{ '/terms' | relative_url }}">Terms</a>
+    <a href="{{ '/delete-account' | relative_url }}">Delete your account</a>
+  </nav>
+</header>
+<main>
+{{ content }}
+</main>
+<footer>
+  Tim Cooley, trading as Altiora Technology · 19 The Sidings, Bishops Itchington, Southam, CV47 2EJ ·
+  <a href="mailto:support@altiora-technology.co.uk">support@altiora-technology.co.uk</a>
+</footer>
+</body>
+</html>
